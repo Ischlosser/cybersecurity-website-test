@@ -1,0 +1,49 @@
+<html lang="en">
+    <head>
+        <title>Language Toggle</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="newscus.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" 
+        rel="stylesheet">
+    </head>
+    <body>
+        <div class="navbar-container">
+            <nav class="navbar-anchor">
+                <ul class="nav-menu">
+                    <li class="text textEN"><a href="base1.htm">Home</a></li>
+                    <li class="text textHU" style="display: none;"><a href="base1.htm">Kezdőoldal</a></li>
+                
+                    <li class="text textEN"><a href="news.htm">News</a></li>
+                    <li class="text textHU" style="display: none;"><a href="news.htm">Hírek</a></li>
+                
+                    <li class="text textEN"><a href="information.htm">Information</a></li>
+                    <li class="text textHU" style="display: none;"><a href="information.htm">Információk</a></li>
+                
+                    <li class="text textEN"><a href="about.htm">About</a></li>
+                    <li class="text textHU" style="display: none;"><a href="about.htm">Rólunk</a></li>
+                </ul>
+                <div class="language-toggle">
+                    <span class="EN">English</span>
+                    <input type="checkbox" class="check" id="langToggle">
+                    <label for="langToggle" class="switch"></label>
+                    <span class="HU">Magyar</span>
+                </div>
+            </nav>
+        </div>
+        <div class="content-wrapper">
+            <div class="article-container">
+                <div class="video-container">
+                    <iframe height="600" width="1000" src="https://www.youtube.com/watch?v=kqaMIFEz15s"></iframe>
+                </div>
+                <div class="headline">Cybersecurity trends for 2025 by an IBM engineer</div>
+            </div>
+        </div>
+        
+        <script src="newsscript.js"></script>
+    </body>
+
+</html>
