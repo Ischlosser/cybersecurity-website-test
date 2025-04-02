@@ -12,7 +12,6 @@ langToggle.addEventListener("change", function() {
     }
 });
 
-// Background image rotation
 const images = [
     'photos/1.jpg', 
     'photos/2.jpg', 
