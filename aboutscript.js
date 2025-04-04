@@ -12,17 +12,25 @@ langToggle.addEventListener("change", function() {
     }
 });
 
-function checkAnswers() {
-    let score = 0;
-    const answers = { q1: "Steal Your Data", q2: "1", q3: "5" };
-    
-    for (let question in answers) {
-        const selected = document.querySelector(`input[name="${question}"]:checked`);
-        if (selected && selected.value === answers[question]) {
-            score++;
-        }
-    }
+document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("quizForm").addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevents page refresh
 
-    document.getElementById("result").textContent = `Your score: ${score}/2`;
-    document.getElementById("result").classList.remove("hidden");
-}
+        let score = 0;
+        const answers = { q1: "STD", q2: "1", q3: "5" };
+
+        for (let question in answers) {
+            const selected = document.querySelector(`input[name="${question}"]:checked`);
+            if (!selected) {
+                alert(`Please answer question: ${question}`);
+                return;
+            }
+            if (selected.value === answers[question]) {
+                score++;
+            }
+        }
+
+        document.getElementById("result").textContent = `Your score: ${score}/3`;
+        document.getElementById("result").classList.remove("hidden");
+    });
+});
